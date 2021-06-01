@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="public/css/main.css" type="text/css">
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/1.13/auth0-spa-js.production.js"></script>
+    <title>Authentication System</title>
+
+  </head>
+  <body>
+    <h2>Auth0 Authentication</h2>
+    <p>Welcome to our page!</p>
+    <form>
+      <input type="text" id="username"/> <br>
+      <input type="text" id="password" /> <br>
+      <button type="button" disabled = "true" id="loginButton" onclick="login()">Login </button>
+      <button type="button" disabled = "true" id="logoutButton"onclick="logout()" >Logout </button>
+    </form>
+    <div class="hidden" id="gated-content">
+      <p>
+        You're seeing this content because you're currently
+        <strong>logged in</strong>.
+      </p>
+      <label>
+        Access token:
+        <pre id="ipt-access-token"></pre>
+      </label>
+      <label>
+        User profile:
+        <pre id="ipt-user-profile"></pre>
+      </label>
+    </div>
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/1.13/auth0-spa-js.production.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
